@@ -1,0 +1,42 @@
+import flet as ft 
+
+
+def main(page: ft.Page):
+    
+     page.bgcolor = "#120f26"
+     page.window_center()
+     page.window_width = '1000'
+     page.window_height = '600'
+     page.window_resizable = False
+     page.window_maximizable = False
+     page.horizontal_alignment='start'
+
+     r1= ft.Row([
+          
+            ft.Container(
+            bgcolor="#FFFFFF",
+            width=500,
+            height=540, 
+            border_radius=10,
+            content= ft.Column([
+                
+                ft.Text("FAÇA SEU LOGIN",size=30),
+                ft.TextField(label= 'Email', icon=ft.icons.ACCOUNT_BOX,width=400),
+                ft.TextField(label= 'senha', icon=ft.icons.ACCOUNT_BOX,width=460),
+                ft.CupertinoFilledButton(text='Entrar',width=173,height=50, padding=5),
+                ft.TextButton(text="não possui cadastro.Realizar cadastro agora",  on_click=True)
+
+
+                ], alignment=ft.MainAxisAlignment.CENTER, horizontal_alignment=ft.CrossAxisAlignment.CENTER)
+            ),
+
+            ft.Image(src='lancar.png.png')
+    
+     ])
+     
+     page.add(r1) 
+     
+
+ft.app(target=main)           
+                    
+     
